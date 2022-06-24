@@ -6,3 +6,4 @@
 
 # Execute backup script every sunday 09:00 
 0 9 * * 0 ./backup_log.sh
+0 9 * * 0 ./remove_archive.sh
