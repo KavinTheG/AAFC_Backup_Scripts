@@ -1,0 +1,43 @@
+====================================================================
+
+Supervisor approval requested - Biocluster HPC account / Approbation du superviseur demandée - Compte de Biocluster CHP
+
+Le français suit. 
+
+Hi <supervisor name>,
+
+<firstname> <lastname> has requested a Biocluster HPC account and you've been listed as the supervisor. 
+
+Could you please confirm <firstname> has read the Biocluster Terms of Use, and provide approval to create the account?
+
+> https://redmine.biodiversity.agr.gc.ca/projects/biocluster/wiki/Biocluster_Terms_of_Use
+
+Please reply directly via Redmine issue Support #<issue> by using the "Edit" button to comment, or send me an email at victor.solaris2@agr.gc.ca. 
+
+Login for Redmine username/password are the same as your AAFC or CFIA credentials. 
+
+> https://redmine.biodiversity.agr.gc.ca/issues/<issue #>
+
+Regards,
+<admin signature>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Bonjour <prénom de superviseur>,
+
+<prénom> <nom de famille> a demandé un compte de Biocluster CHP et vous avez été répertorié en tant que superviseur.
+
+Pourriez-vous confirmer que <prénom> a lu les conditions d'utilisation et donner son approbation pour créer le compte?
+
+> https://redmine.biodiversity.agr.gc.ca/projects/biocluster/wiki/Biocluster_Terms_of_Use
+
+Veuillez répondre directement via le ticket d'assistance sur Redmine Support #<issue>, en utilisant le bouton "modifier" pour commenter, ou envoyer un e-mail à <admin email here>.
+
+Les identifiants de connexion sont les mêmes que votre compte réseau AAC ou ACIA. 
+
+> https://redmine.biodiversity.agr.gc.ca/issues/<issue>
+
+Regards,
+<admin signature here>
+
+====================================================================
