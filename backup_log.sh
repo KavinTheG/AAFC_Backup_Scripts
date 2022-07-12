@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-src_dir= '/'
+src_dir=/
 
 # Checks if an argument was given
 if [ $# -eq 0 ]; then 
@@ -17,17 +17,23 @@ if [ ! -d /backup_logs ]; then
 fi
 
 # Make a new directory
-mkdir /backup_logs/backup_log-"$(date +%F)"
+mkdir /backup_logs/backup_log_"$(date +%F)"
 
 # -a -> archive
 # -v -> verbose
-find / -type f -name "*.log" -exec rsync -av --exclude={/backups_logs} '{}' /backup_logs/backup_log-"$(date +%F)" \;
+find $src_dir -type f -name "*.log" -exec rsync -av --exclude={/backups_logs} '{}' /backup_logs/backup_log_"$(date +%F)" \;
 
 # -z -> gzip
 # -c -> create archive
 # -v -> verbose
 # -f -> the name
-tar -zcvf "backup_log-$(date +%F).tar.gz" /backup_logs/backup_log-"$(date +%F)"
 
-# Remove new directory
-rm -r /backup_logs/backup_log-"$(date +%F)"
+if [[ -d /backup_logs/backup_log_"$(date +%F)" ]] 
+then
+	tar -zcvf /backup_logs/backup_log_$(date +%F).tar.gz /backup_logs/backup_log_$(date +%F) --remove-files
+
+	# Remove new directory
+	# rm -r /backup_logs/backup_log_"$(date +%F)"
+else
+	echo "Backup directory backup_log-$(date +%F) was not created"
+fi
