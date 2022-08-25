@@ -26,8 +26,8 @@ fi
 
 
 # Creates backup directory if none exists already
-if [ ! -d /backup_logs ]; then
-	mkdir /backup_logs
+if [ ! -d ~/backup_logs ]; then
+	mkdir ~/backup_logs
 fi
 
 # Make a new directory
@@ -44,13 +44,13 @@ find $src_dir -type f -name "*.log" -exec rsync -av --exclude={/backups_logs} '{
 # -v -> verbose
 # -f -> the name
 
-if [[ -d /backup_logs/$dir_title ]] 
+if [[ -d ~/backup_logs/$dir_title ]] 
 then
-	tar -zcvf /backup_logs/$dir_title.tar.gz /backup_logs/$dir_title --remove-files
+	tar -zcvf ~/backup_logs/$dir_title.tar.gz ~/backup_logs/$dir_title --remove-files
 else
 	echo "Backup directory $dir_title was not created"
 fi
 
 
 echo "removing backup_log-${expiry_date}.tar.gz"
-find /backup_logs/  -name "*${expiry_date}.tar.gz" -exec rm {} \;
+find ~/backup_logs/  -name "*${expiry_date}.tar.gz" -exec rm {} \;
