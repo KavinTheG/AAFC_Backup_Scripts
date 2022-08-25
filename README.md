@@ -1,5 +1,5 @@
 # Backup Script
-The script in this repo will allow users to backup files with a .log extension. The backed up archives will be found in /backup_logs. Any archive that is 5 weeks or older will be deleted.  
+The script in this repo will allow users to backup files with a .log extension. The backed up archives will be found in ~/backup_logs. Any archive that is 5 weeks or older will be deleted.  
 
 ## Installation 
 ```
