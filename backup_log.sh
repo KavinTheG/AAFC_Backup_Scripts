@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 # Path to desired backup directory
-src_dir=/
+src_dir=~
 
 # Extension
 ext=.log
@@ -14,7 +14,7 @@ expiry_date=$(date --date="5 week ago" +%F)
 
 # Checks if an argument was given
 if [ $# -eq 0 ]; then 
-	echo "Source directory was not given. Backing up $ext files from root ($src_dir)"
+	echo "Source directory was not given. Backing up $ext files from home direcotry ($src_dir)"
 	dir_title=backup_log_$(date +%F)
 else 
 	src_dir=$1 
