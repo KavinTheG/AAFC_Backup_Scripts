@@ -33,11 +33,11 @@ fi
 # Make a new directory
 echo "Making directory $dir_title"
 sleep 3
-mkdir /backup_logs/$dir_title
+mkdir ~/backup_logs/$dir_title
 
 # -a -> archive
 # -v -> verbose
-find $src_dir -type f -name "*.log" -exec rsync -av --exclude={/backups_logs} '{}' /backup_logs/"$dir_title" \;
+find $src_dir -type f -name "*.log" -exec rsync -av --exclude={~/backups_logs} '{}' ~/backup_logs/"$dir_title" \;
 
 # -z -> gzip
 # -c -> create archive
